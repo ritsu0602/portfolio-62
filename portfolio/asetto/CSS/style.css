@@ -12,6 +12,7 @@ body{
     position: fixed;
     top: 110px;
     left: -2px;
+    z-index: 9999;
 }
 
 .side-nav ul {
