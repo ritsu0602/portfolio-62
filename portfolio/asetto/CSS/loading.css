@@ -1,0 +1,208 @@
+/* ============ ローディングスクリーン ============ */
+:root {
+  --bg-color: #0e1116;
+  --primary-gray: #b0b3b8;
+  --accent-pink: #ff3b8f;
+  --btn-gray: #c0c2c5;
+  --load-time: 3s;
+}
+
+body.is-loading {
+  overflow: hidden;
+}
+
+/* ローディングスクリーン */
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition:
+    opacity 0.8s ease,
+    transform 1.2s cubic-bezier(0.7, 0, 0.3, 1),
+    visibility 0.8s ease;
+}
+
+body.loaded .loader-wrapper {
+  opacity: 0;
+  transform: scale(1.4);
+  visibility: hidden;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--primary-gray);
+}
+
+/* 波形エリア */
+.waveform {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.bar {
+  width: 3px;
+  background-color: var(--primary-gray);
+  border-radius: 2px;
+  height: 20%;
+  animation: wave 1.2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    height: 20%;
+  }
+  50% {
+    height: 100%;
+  }
+}
+
+/* プログレスバー */
+.progress-container {
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.progress-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: var(--primary-gray);
+  width: 0%;
+  animation: loadProgress var(--load-time) linear forwards;
+}
+
+.progress-thumb {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 14px;
+  height: 14px;
+  background-color: var(--primary-gray);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: moveThumb var(--load-time) linear forwards;
+}
+
+@keyframes loadProgress {
+  to {
+    width: 100%;
+  }
+}
+@keyframes moveThumb {
+  to {
+    left: 100%;
+  }
+}
+
+/* コントロールボタン群 */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.btn-side {
+  display: flex;
+  gap: 4px;
+  opacity: 0.5;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.triangle.left {
+  border-right: 14px solid var(--btn-gray);
+}
+.triangle.right {
+  border-left: 14px solid var(--btn-gray);
+}
+
+.play-button {
+  width: 80px;
+  height: 80px;
+  background-color: var(--btn-gray);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 0 rgba(255, 59, 143, 0);
+  animation: pulse 2s infinite;
+  transition:
+    transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background-color 0.3s;
+}
+
+.play-button.clicked {
+  transform: scale(0.85);
+  background-color: var(--accent-pink);
+}
+
+.play-triangle {
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-left: 26px solid var(--accent-pink);
+  margin-left: 6px;
+  transition: border-left-color 0.3s;
+}
+
+.play-button.clicked .play-triangle {
+  border-left-color: white;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 59, 143, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(255, 59, 143, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 59, 143, 0);
+  }
+}
+
+.loading-text {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: var(--primary-gray);
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .loader-container {
+    width: 85%;
+  }
+  .play-button {
+    width: 70px;
+    height: 70px;
+  }
+}

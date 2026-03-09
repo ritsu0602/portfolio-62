@@ -1,0 +1,105 @@
+/* ============ ハンバーガーメニュー（モバイル専用） ============ */
+
+/* デスクトップでは非表示 */
+.hb-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hb-menu {
+    display: block;
+  }
+
+  /* ── トリガーボタン ── */
+  .hb-btn {
+    position: fixed;
+    top: 24px;
+    right: 20px;
+    z-index: 300;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    writing-mode: vertical-rl;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    line-height: 1;
+  }
+
+  .hb-label--menu {
+    color: #ff3d8b;
+    display: block;
+  }
+
+  .hb-label--close {
+    display: none;
+    color: #ff3d8b;
+  }
+
+  /* 開いた状態のラベル切り替え */
+  .hb-menu.is-open .hb-label--menu {
+    display: none;
+  }
+  .hb-menu.is-open .hb-label--close {
+    display: block;
+  }
+
+  /* ── フルスクリーンオーバーレイ ── */
+  .hb-nav {
+    position: fixed;
+    inset: 0;
+    background: #0f1115;
+    z-index: 250;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+
+  .hb-menu.is-open .hb-nav {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* ── ナビリスト ── */
+  .hb-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hb-nav li {
+    width: 220px;
+    height: 72px;
+    border: 2px solid #e6e6e6;
+    background-color: #292c34;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hb-nav a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #e6e6e6;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.05em;
+  }
+
+  .hb-nav a:hover {
+    color: #ff3d8b;
+  }
+}

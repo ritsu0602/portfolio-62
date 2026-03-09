@@ -1,0 +1,1574 @@
+@charset "UTF-8";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    background-color: #0f1115;
+}
+
+.side-nav {
+    position: fixed;
+    top: 110px;
+    left: -2px;
+}
+
+.side-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.side-nav li {
+  padding: 20px 10px 20px 40px;
+  border: 2px solid #e6e6e6;
+  font-size: 14px;
+  background-color: #292c34;
+  font-weight: 700;
+}
+
+.FV{
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.FV_1{
+    position: relative;
+    height: 600px;
+    width: 570px;
+    border: 3px solid #e6e6e6;
+    border-radius: 10px;
+}
+
+.music-play {
+  position: absolute;
+  right: 8px;
+  bottom: 6px;
+  width: 200px;
+}
+.music-btn-area {
+  display: flex;
+  margin-bottom: 10px;
+}
+.playback,
+.stop {
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 31px;
+  border: 1px solid #e6e6e6;
+  line-height: 31px;
+  text-align: center;
+}
+.playback::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top: 8px solid transparent;
+  border-right: 0;
+  border-bottom: 8px solid transparent;
+  border-left: 18px solid #ff3d8b;
+  border-style: solid;
+  content: "";
+}
+.stop::before,
+.stop::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 19px;
+  background-color: #ff3d8b;
+  content: "";
+}
+.stop::before {
+  left: 45%;
+}
+.stop::after {
+  right: 45%;
+}
+.speaker {
+  display: flex;
+  padding: 6px 11px;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  margin-top: 7px;
+
+  gap: 10px;
+}
+.speaker-icon {
+  width: 19px;
+}
+.speaker-bar {
+  position: relative;
+  width: 140px;
+  height: 2px;
+  margin-top: 6px;
+  background-color: #e6e6e6;
+}
+.speaker-bar::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: #ff3d8b;
+  content: "";
+}
+.speaker-bar::after {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #ff3d8b;
+  content: "";
+}
+
+.noizu{
+    background-image:url(../1x/noizu.png);
+    margin: 0 auto;
+    width: 550px;
+    height: 425px;
+    margin-top:30px ;
+}
+
+.player-info1{
+    width: 550px;
+    height: 88px;
+    margin: 0 auto;
+    margin-top: 17px;
+    border-radius: 10px;
+}
+
+.player-info1 h1 {
+  border: 1px solid #e6e6e6;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+  margin-top: 16px;
+  margin-left: 8px;
+    font-weight: 500;
+}
+
+.player-info1 p {
+  background-color: #0f1115;
+  border: 1px solid #e6e6e6;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: inline-block;
+  margin-top: -1px;
+  padding: 10px;
+  font-size: 18px;
+  margin-left: 8px;
+  color: #b8b8b8;
+  padding-right: 39px;
+}
+
+.nami{
+    background-image: url(../1x/nami.png);
+    width: 320px;
+    height: 19px;
+    margin: 0 auto;
+}
+
+.nami-box{
+    width: 330px;
+    height: 22px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    margin-top: 9px;
+    margin-left: 7.6px;
+}
+
+
+.about{
+    background: url("../1x/about-haikei.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 927px;
+}
+
+.about-ka-do{
+    width: 1100px;
+    height: 660px;
+    display: flex;
+    background-color: #292c34E6;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #ff3d8b;
+}
+
+.about-ka-do-left img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ff3d8b;
+  margin-top: 39px;
+  margin-left: 32px;
+}
+
+.about-ka-do-left p{
+  font-size: 25px;
+  padding-top: 45px;
+  padding-left: 128px;
+    font-weight: 700;
+}
+
+.about-taitoru-web{
+  font-size: 55px;
+  padding-top: 103px;
+  padding-left: 55px;
+    font-weight: 500;
+}
+
+.about-namae{
+    font-size: 30px;
+    padding-top: 55px;
+    padding-left: 55px;
+}
+
+.about-naiyou1{
+    font-size: 17px;
+    padding-top: 55px;
+    padding-left: 55px;
+    line-height: 1.76;
+}
+
+.about-naiyou2{
+    padding-top: 15px;
+    font-size: 17px;
+    padding-left: 55px;
+    line-height: 1.76;
+}
+
+.about-naiyou3{
+    padding-top: 15px;
+    font-size: 17px;
+    padding-left: 55px;
+    line-height: 1.76;
+}
+
+.btn{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 60px;
+  background: #e6e6e6;
+  color: #ff3d8b;
+  border-radius: 30px;
+  font-size: 20px;
+  margin-top: 36px;
+  margin-left: 450px;
+  transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: #ff3d8b;
+    color: #e6e6e6;
+}
+
+.work {
+  max-width: 1110px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.work-track{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    padding-top: 66px;
+      font-weight: 700;
+}
+
+.work-taitoru{
+    font-size: 55px;
+    display: flex;
+    justify-content: center;
+    padding-top: 19px;
+      font-weight: 500;
+}
+
+.work-btn{
+  position: absolute;
+  right: 40px;
+  top: 112px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 60px;
+  background: #e6e6e6;
+  color: #ff3d8b;
+  border-radius: 30px;
+  font-size: 20px;
+  margin-left: 980px;    
+  transition: 0.3s;   
+}
+
+.work-btn:hover{
+    background-color: #ff3d8b;
+    color: #e6e6e6;
+}
+
+.zyaketto .works__link {
+  transition: 0.3s;
+  position: relative;
+  display: block;
+  height: 100%;
+}
+.zyaketto .works__link::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 35px solid #6b6d73;
+  border-right: 0;
+  right: 27px;
+  bottom: 30px;
+  transition: 0.3s;
+}
+.zyaketto .works__link::after {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 10px;
+  background-color: #6b6d73;
+  right: 60px;
+  bottom: 44px;
+  transition: 0.3s;
+}
+
+.works__link:hover::before {
+  right: 17px;
+  border-left:35px solid #ff3d8b;
+}
+.works__link:hover::after {
+  right: 52px;
+  background-color: #ff3d8b;
+}
+
+.work-senn{
+    border: 2px solid #e6e6e6;
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 54px;
+}
+
+.work-number {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+
+.work-ka-do1{
+  position: relative;
+  height: 480px;
+  width: 480px;
+  background: #292c34;
+  overflow: hidden;
+  margin-top: 62px;
+}
+
+.work-image1{
+    width: 450px;
+    height: 330px;
+    padding-top: 35px;
+    padding-left: 20px;
+}
+
+.work-image2{
+    width: 450px;
+    height: 330px;
+    padding-top: 35px;
+    padding-left: 20px;
+}
+
+.work-image3{
+    width: 450px;
+    height: 330px;
+    padding-top: 35px;
+    padding-left: 20px;
+}
+
+.work-image4{
+    width: 450px;
+    height: 330px;
+    padding-top: 35px;
+    padding-left: 20px;
+}
+
+.work-minitaitoru1{
+    font-size: 30px;
+    color: #ff3d8b;
+    padding-left: 33px;
+    padding-top: 29px;
+}
+
+.work-number1{
+    font-size: 75px;
+    padding-left: 389px;
+}
+
+.work-info1{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 15px;
+    justify-content: start;
+}
+
+.work-info2{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 15px;
+    justify-content: start;
+}
+
+.work-info3{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 15px;
+    justify-content: start;
+}
+
+.work-info4{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 15px;
+    justify-content: start;
+}
+
+.work-ka-do2{
+  position: relative;
+  height: 480px;
+  width: 480px;
+  background: #292c34;
+  overflow: hidden;
+  margin-left: 95px;
+  margin-top: 62px;
+}
+
+.work-minitaitoru2{
+    font-size: 30px;
+    color: #ff3d8b;
+    padding-left: 33px;
+    padding-top: 29px;
+}
+
+.work-number2{
+    font-size: 75px;
+    padding-left: 389px;
+}
+
+.work-ka-do3{
+  position: relative;
+  height: 480px;
+  width: 480px;
+  background: #292c34;
+  overflow: hidden;
+  margin-top: 62px;
+}
+
+.work-minitaitoru3{
+    font-size: 30px;
+    color: #ff3d8b;
+    padding-left: 33px;
+    padding-top: 29px;
+}
+
+.work-number3{
+    font-size: 75px;
+    padding-left: 389px;
+}
+
+.work-ka-do4{
+  position: relative;
+  height: 480px;
+  width: 480px;
+  background: #292c34;
+  overflow: hidden;
+  margin-left: 95px;
+  margin-top: 62px;
+}
+
+.work-minitaitoru4{
+    font-size: 30px;
+    color: #ff3d8b;
+    padding-left: 33px;
+    padding-top: 29px;
+}
+
+.work-number4{
+    font-size: 75px;
+    padding-left: 389px;
+}
+
+.work-sikaku{
+    display: inline-block;
+    width: 3px;
+    height: 16px;
+    background-color: #ff3d8b;
+    margin-right: 10px;
+    margin-left: 30px;
+}
+
+.zyaketto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.work-senn1{
+    border: 2px solid #e6e6e6;
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 62px;
+}
+
+
+.skills{
+    background: url(../1x/skills-haikei.png);
+    height: 987px;
+}
+
+.skills-track{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+      font-weight: 700;
+}
+
+.skills-taitoru{
+    font-size: 55px;
+    display: flex;
+    justify-content: center;
+    padding-top: 19px;
+      font-weight: 500;
+}
+
+.skills-naiyou{
+    display: flex;
+    justify-content: center;
+    gap: 170px;
+    margin-top: 78px;
+}
+
+.skills-minitaitoru{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.skills-setumei{
+    font-size: 17px;
+    line-height: 1.7;
+    padding-top: 38px;
+}
+
+.skills-mini{
+    font-size: 30px;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding-top: 75px;
+}
+
+.skills-matome1,
+.skills-matome2 {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.skills-matome1{
+    display: flex;
+    gap: 29px;
+}
+
+.skills-box{
+    width: 340px;
+    height: 120px;
+    background-color: #292c34;
+    margin-top: 15px;
+    display: flex;
+}
+
+.skills-sikakuaikonn{
+    width: 81px;
+    height: 81px;
+    border: 1px solid #e6e6e6;
+    margin-left: 9px;
+    margin-top: 19.5px;
+}
+
+.skills-aikonn{
+    font-size: 38px;
+    color: #ed962f;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+      font-weight: 700;
+}
+
+.skills-naiyou1{
+    font-size: 20px;
+    padding-top: 52px;
+    padding-left: 22px;
+}
+
+.skills-box2{
+    width: 340px;
+    height: 120px;
+    background-color: #292c34;
+    margin-top: 15px;
+    display: flex;
+}
+
+.skills-aikonn2{
+    font-size: 38px;
+    color: #0b74b8;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+      font-weight: 700;
+}
+
+.skills-mini2{
+    font-size: 30px;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding-top: 75px;
+}
+
+.skills-matome2{
+    display: flex;
+    gap: 29px;
+}
+
+.skills-box3{
+    width: 340px;
+    height: 120px;
+    background-color: #292c34;
+    margin-top: 15px;
+    display: flex;
+}
+
+.skills-box4{
+    width: 340px;
+    height: 120px;
+    background-color: #292c34;
+    margin-top: 15px;
+    display: flex;
+}
+
+.skills-box5{
+    width: 340px;
+    height: 120px;
+    background-color: #292c34;
+    margin-top: 15px;
+    display: flex;
+}
+
+.skills-box3 img{
+    width: 82px;
+    height: 79px;
+    margin-top: 5px;
+    margin-left: -7px;
+}
+
+.skills-box4 img{
+    width: 99px;
+    height: 95px;
+    margin-top: 5px;
+    margin-left: -7px;
+}
+
+.skills-box5 img{
+    width: 94px;
+    height: 84px;
+    margin-top: 5px;
+    margin-left: -2px;
+}
+
+
+.skills-naiyou1 {
+  position: relative;
+  width: calc(100% - 81px);
+  padding-top: 52px;
+  padding-left: 22px;
+  font-size: 20px;
+}
+.skills-naiyou1::before {
+  position: absolute;
+  bottom: 21px;
+  width: 85%;
+  height: 3px;
+  background-color: #e6e6e6;
+  content: "";
+}
+.skills-naiyou1::after {
+  position: absolute;
+  bottom: 13px;
+  z-index: 3;
+  width: 8px;
+  height: 16px;
+  border: 1px solid #ff3d8b;
+  background-color: #e6e6e6;
+  content: "";
+}
+.skills-box .skills-naiyou1::after {
+  left: 69%;
+}
+.skills-box2 .skills-naiyou1::after {
+  left: 42%;
+}
+.skills-box3 .skills-naiyou1::after {
+  left: 55%;
+}
+.skills-box4 .skills-naiyou1::after {
+  left: 57%;
+}
+.skills-box5 .skills-naiyou1::after {
+  left: 39%;
+}
+
+
+.contact-track{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+      font-weight: 700;
+}
+
+.contact-taitoru{
+    font-size: 55px;
+    display: flex;
+    justify-content: center;
+    padding-top: 19px;
+      font-weight: 500;
+}
+
+.contact-box{
+    width: 572px;
+    height: 1013px;
+    border: 3px solid #e6e6e6;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 75px;
+}
+
+.contact-text{
+    font-size: 19px;
+    padding-top: 37px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-box1{
+    width: 509px;
+    height: 133px;
+    border: 2px solid #e6e6e6;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-top: 67px;
+}
+
+.contact-namae{
+    width: 481px;
+    height: 53px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 16px;
+}
+
+.contact-text1{
+    font-size: 20px;
+    padding-left: 15px;
+    padding-top: 24px;
+}
+
+.contact-box2{
+    width: 509px;
+    height: 133px;
+    border: 2px solid #e6e6e6;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.contact-meru{
+    width: 481px;
+    height: 53px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 16px;
+}
+
+.contact-text2{
+    font-size: 20px;
+    padding-left: 15px;
+    padding-top: 24px;
+}
+
+.contact-box3{
+    width: 509px;
+    height: 287px;
+    border: 2px solid #e6e6e6;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.contact-otoi{
+        width: 481px;
+    height: 197px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 16px;
+}
+
+.contact-text3{
+    font-size: 20px;
+    padding-left: 15px;
+    padding-top: 24px;
+}
+
+.contact-btn{
+    width: 195px;
+    height: 70px;
+    margin: 0 auto;
+    margin-top: 37px;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.contact-btn:hover{
+    background-color: #ff3d8b;
+}
+
+.contact-text4:hover{
+    color: #e6e6e6;;
+}
+
+.contact-text4{
+    font-size: 29px;
+    color: #ff3d8b;
+    transition: 0.3s;
+}
+
+.contact-text5{
+    font-size: 25px;
+    color: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    padding-top: 76px;
+      font-weight: 500;
+}
+
+.contact-text6{
+    font-size: 23px;
+    color: #b8b8b8;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.contact-namae,
+.contact-meru,
+.contact-otoi {
+  display: block;
+  background-color: transparent;
+  outline: none;
+  box-sizing: border-box;
+  padding: 10px; 
+  color: #e6e6e6;
+}
+
+.contact-otoi {
+  resize: none;
+}
+
+.contact-btn {
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.contact-text1,
+.contact-text2,
+.contact-text3 {
+  display: block;
+}
+
+
+.saigo{
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+.about-taitoru-sp{
+    display: none;
+    padding-bottom: 27px;
+}
+
+.about-WebDesigner-sp{
+    display: none;
+}
+
+
+.about-namae{
+    display: block;
+}
+
+.about-namae-sp{
+    display: none;
+}
+
+.about-namae-sp1{
+    display: none;
+}
+
+.about-naiyou1{
+    display: block;
+}
+.about-naiyou2{
+    display: block;
+}
+.about-naiyou3{
+    display: block;
+}
+
+.about-naiyou1sp{
+    display: none;
+}
+    .about-naiyou2sp{
+    display: none;
+}
+    .about-naiyou3sp{
+    display: none;
+}
+
+.work-btnsp{
+    display: none;
+}
+@media (max-width: 768px){
+
+    .zyaketto {
+        display: grid;
+    }
+
+
+    .work-ka-do4{
+        display: none;
+    }
+
+        .work-btnsp {
+        display: block;
+        align-items: center;
+        width: 175px;
+        height: 45px;
+        background: #e6e6e6;
+        color: #ff3d8b;
+        border-radius: 30px;
+        font-size: 15px;
+        margin-top: 27px;
+        justify-content: center;
+        margin: 27px auto;
+        text-align: center;
+        line-height: 45px;
+        transition: 0.3s;
+    }
+
+
+    .work-btn{
+    display: none;
+     }
+    .about-naiyou1sp{
+    display: block;
+    font-size: 12px;
+    line-height: 2;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+ }
+ .about-naiyou2sp{
+    display: block;
+    font-size: 12px;
+    line-height: 2;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+ }
+ .about-naiyou3sp{
+    display: block;
+    font-size: 12px;
+    line-height: 2;
+    display: flex;
+    justify-content: center;
+ }
+
+    .about-naiyou1{
+    display: none;
+ }
+    .about-naiyou2{
+    display: none;
+ }
+    .about-naiyou3{
+    display: none;
+ }
+    .about-namae-sp1{
+    display: block;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    padding-top: 18px;
+    padding-bottom: 40px;
+  }
+    .about-namae-sp{
+        display: block;
+        font-size: 22px;
+        display: flex;
+        justify-content: center;
+    }
+
+ .about-namae{
+    display: none;
+ }
+    .about-taitoru-web{
+        display: none;
+    }
+
+    .about-WebDesigner-sp{
+        display: block;
+        font-size: 14px;
+        padding-bottom: 18px;
+        display: flex;
+        justify-content: center;
+ }
+
+    .about-taitoru-sp{
+        display: block;
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        padding-top: 18px;
+          font-weight: 500;
+    }
+
+
+    .btn{
+        width: 175px;
+        height: 45px;
+        font-size: 15px;
+        margin-left: 72px;
+        margin-top: 20px;
+    }
+
+
+    .side-nav{
+    display: none;
+   }
+    .FV {
+    transform: scale(0.6);
+     height: 475px;
+  }
+  .music-btn-area {
+    margin-left: 12px;
+  }
+  .playback,.stop {
+    width: 94px;
+  }
+
+  .noizu{
+    background: url(../2x/FV-noizu-sp.png);
+    width: 535px;
+  }
+    .about{
+        height: 816px;
+    }
+
+    .about-ka-do{
+        width: 320px;
+        height: 765px;
+        display: grid;
+        background: url(../2x/about-haikei.png);
+    }
+
+    .about-ka-do-left p{
+        font-size: 15px;
+        padding-top: 25px;
+        padding-left: 27px;
+    }
+
+
+    .about-ka-do-left img{
+        width: 130px;
+        height: 130px;
+        display: block;
+        margin: 0 auto;
+    }
+    .about-ka-do-right > p {
+    text-align: center;
+  }
+
+    .about-namae {
+        font-size: 22px;
+    }
+
+
+    .work-taitoru{
+        font-size: 25px;
+    }
+    .work-track{
+        font-size: 15px;
+        padding-top: 45px;
+    } 
+    .work-senn{
+        margin-top: 25px;
+        width: 320px;
+    }
+
+    .zyaketto .works__link::before {
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 25px solid #6b6d73;
+  border-right: 0;
+  right: 10px;
+  bottom: 11px;
+  transition: 0.3s;
+}
+.zyaketto .works__link::after {
+  width: 25px;
+  height: 9px;
+  background-color: #6b6d73;
+  right: 31px;
+  bottom: 21px;
+  transition: 0.3s;
+}
+
+
+
+    .work-ka-do1{
+        margin-top: 45px;
+        width: 320px;
+        height: 319px;
+    }
+
+    .work-image1 {
+        width: 300px;
+        height: 220px;
+        padding-left: 10px;
+        padding-top: 18px;
+    }
+
+    .work-number1{
+        font-size: 50px;padding-left: 225px;
+    }
+    .work-minitaitoru1{
+        font-size: 19px;
+        padding-top: 18px;
+        padding-left: 18px;
+    }
+
+    .work-info1 {
+        row-gap: 9px;
+        margin-top: 15px;
+        font-size: 12px;
+    }
+
+    .work-sikaku {
+        width: 3px;
+        height: 11px;
+        margin-left: 18px;
+    }
+    .work-ka-do2{
+        margin-top: 45px;
+        width: 320px;
+        height: 319px;
+        margin-left: 0;
+    }
+
+    .work-image2 {
+        width: 300px;
+        height: 220px;
+        padding-left: 10px;
+        padding-top: 18px;
+    }
+
+    .work-number2{
+        font-size: 50px;padding-left: 225px;
+    }
+    .work-minitaitoru2{
+        font-size: 19px;
+        padding-top: 18px;
+        padding-left: 18px;
+    }
+
+    .work-info2 {
+        row-gap: 9px;
+        margin-top: 15px;
+        font-size: 12px;
+    }
+
+        .work-sikaku {
+        width: 3px;
+        height: 11px;
+        margin-left: 18px;
+    }
+    .work-info3{
+        font-size: 12px;
+    }
+
+    .work-ka-do3{
+        margin-top: 45px;
+        width: 320px;
+        height: 319px;
+    }
+
+    .work-image3 {
+        width: 300px;
+        height: 220px;
+        padding-left: 10px;
+        padding-top: 18px;
+    }
+
+    .work-number3{
+        font-size: 50px;
+        padding-left: 225px;
+    }
+    .work-minitaitoru3{
+        font-size: 19px;
+        padding-top: 18px;
+        padding-left: 18px;
+    }
+
+    .work-info3 {
+        row-gap: 9px;
+        margin-top: 15px;
+        font-size: 12px;
+    }
+
+        .work-sikaku {
+        width: 3px;
+        height: 11px;
+        margin-left: 18px;
+    }
+
+    .work-senn1 {
+        margin-top: 25px;
+        width: 320px;
+    }
+
+   
+    .skills-track {
+        font-size: 15px;
+        padding-top: 45px;
+    }
+
+    .skills-taitoru{
+        font-size: 25px;
+    }
+
+    .skills-naiyou {
+        margin-top: 25px;
+        display: grid;
+    }
+
+    .skills-minitaitoru {
+        font-size: 16px;
+        padding-left: 35px;
+        display: block;
+    }
+
+    .skills-setumei{
+        font-size: 12px;
+        padding-top: 18px;
+        line-height: 2.4;
+    }
+
+    .skills-naiyou{
+        gap: 18px;
+    }
+
+    .skills{
+        background: url(../2x/top-skiru-sp.png);
+    }
+    .skills-mini{
+        font-size: 16px;
+        padding-top: 25px;
+        padding-left: 27px;
+    }
+    .skills-mini2 {
+        font-size: 16px;
+        padding-top: 25px;
+        padding-left: 27px;
+        padding-top: 15px;
+    }
+
+    .skills-matome1{
+        display: grid;
+        gap: 10px;
+        justify-content: center;
+    }
+    .skills-matome2{
+        display: grid;
+        gap: 10px;
+        justify-content: center;
+    }
+    .skills-box{
+        width: 250px;
+        height: 86px;
+        margin-top: 10px;
+    }
+    .skills-sikakuaikonn{
+        width: 57px;
+        height: 57px;
+    }
+    .skills-aikonn{
+        font-size: 30px;
+        padding-top: 14px;
+    }
+    .skills-naiyou1 {
+        font-size: 17px;
+        padding-top: 30px;
+        padding-left: 20px;
+    }
+    .skills-box2{
+        width: 250px;
+        height: 86px;
+        margin-top: 0;
+    }
+    .skills-sikakuaikonn2{
+        width: 57px;
+        height: 57px;
+    }
+    .skills-aikonn2{
+        font-size: 30px;
+        padding-top: 14px;
+    }
+    .skills-box3{
+        width: 250px;
+        height: 86px;
+    }
+    .skills-box4{
+        width: 250px;
+        height: 86px;
+        margin-top: 0;
+    }
+    .skills-box5{
+        width: 250px;
+        height: 86px;
+        margin-top: 0;
+    }
+    .skills-box3 img{
+        width: 59px;
+        height: 57px;
+        margin-top: 3px;
+        margin-left: -6px;
+    }
+    .skills-box4 img {
+        width: 70px;
+        height: 68px;
+        margin-left: -5px;
+    }
+    .skills-box5 img {
+        width: 68px;
+        height: 59px;
+    }
+    .skills-naiyou1::after{
+        width: 6px;
+        height: 16px;
+    }
+    .skills-naiyou1::before{
+        width: 92%;
+    }
+    
+
+    
+    .contact-track {
+        font-size: 15px;
+        padding-top: 45px;
+    }
+    .contact-taitoru {
+            font-size: 25px;
+    }
+    .contact-text{
+        font-size: 13px;
+        padding-top: 25px;
+    }
+    .contact-text1{
+        font-size: 13px;
+        padding-top: 4px;
+    }
+    .contact-text2{
+        font-size: 13px;
+        padding-top: 4px;
+    }
+    
+    .contact-text3{
+        font-size: 13px;
+        padding-top: 4px;
+    }
+    .contact-text5{
+        font-size: 13px;
+        padding-top: 45px;
+    }
+    .contact-text6{
+        font-size: 12px;
+        padding-top: 10px;
+    }
+    .contact-namae {
+        width: 252px;
+        height: 27px;
+    }
+    .contact-box1 {
+        width: 266px;
+        height: 68px;
+        margin-top: 25px;
+    }
+    .contact-meru {
+        width: 252px;
+        height: 27px;
+    }
+    .contact-box2 {
+        width: 266px;
+        height: 68px;
+        margin-top: 15px;
+    }
+    .contact-otoi{
+        width: 252px;
+        height: 103px;
+    }
+    .contact-box3{
+        width: 266px;
+        height: 150px;
+        margin-top: 15px;
+    }
+    .contact-box {
+        width: 300px;
+        height: 531px;
+        margin-top: 27px;
+    }
+    .contact-btn{
+        margin-top: 20px;
+        width: 102px;
+        height: 29px;
+        border-radius: 5px;
+    }
+    .contact-text4{
+        font-size: 15px;
+    }
+    .saigo{
+        font-size: 6px;
+        padding-top: 65px;
+    }
+        .work-btnsp:hover{
+            background-color: #ff3d8b;
+            color: #e6e6e6;
+        }
+}
+
+
+
+/* ============ スクロール拡大アニメーション ============ */
+.fv-scroll-zone {
+  position: relative;
+  height: 300vh;
+}
+
+.fv-scroll-zone > header {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+
+/* FVをビューポート全体に広げてFV_1を画面中央に置く */
+.fv-scroll-zone .FV {
+  height: 100vh;
+}
+
+/* FV_1：ノイズ画像中心（上40%）に向けてズームイン */
+.FV_1 {
+  transform-origin: 50% 40%;
+  will-change: transform;
+}
+
+/* 黒フェードオーバーレイ（JS で生成） */
+.fv-black-overlay {
+  position: fixed;
+  inset: 0;
+  background: #0f1115;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* ABOUTセクション：黒背景の上に重ねて小→大でフェード登場 */
+.about {
+  position: relative;
+  z-index: 25;
+}
+
+.about.about-will-animate {
+  opacity: 0;
+  transform: scale(0.7);
+  transform-origin: center center;
+}
+
+.about.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* about より下のセクションは黒オーバーレイの上に出す */
+.work,
+.skills,
+.contact,
+.saigo {
+  position: relative;
+  z-index: 25;
+}
+
+/* スマホではアニメーション無効 */
+@media (max-width: 768px) {
+  .fv-scroll-zone {
+    height: auto;
+  }
+  .fv-scroll-zone > header {
+    position: static;
+    overflow: visible;
+  }
+  .fv-scroll-zone .FV {
+    height: 475px;
+  }
+  .about.about-will-animate {
+    opacity: 1;
+    transform: none;
+  }
+}
