@@ -26,6 +26,12 @@ body{
   font-size: 14px;
   background-color: #292c34;
   font-weight: 700;
+  transition: 0.3s;
+  width: 120px;
+}
+
+.side-nav li:hover {
+    width: 130px;
 }
 
 .FV{
